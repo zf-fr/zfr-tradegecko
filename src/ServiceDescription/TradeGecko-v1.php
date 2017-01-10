@@ -1662,6 +1662,11 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
+                'fulfillment_line_items' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ]
             ],
         ],
 
@@ -2284,6 +2289,11 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
+                'invoice_line_items' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ]
             ],
         ],
 
@@ -3190,6 +3200,11 @@ return [
                     'required' => false,
                     'enum' => ['draft', 'active', 'finalized']
                 ],
+                'order_line_items' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ]
             ],
         ],
 
@@ -4058,6 +4073,11 @@ return [
                     'type' => 'array',
                     'required' => false,
                 ],
+                'variants' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false
+                ]
             ],
         ],
 
@@ -4351,6 +4371,11 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
+                'purchase_order_line_items' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ]
             ],
         ],
 
@@ -4850,6 +4875,11 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
+                'stock_adjustment_line_items' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ]
             ],
         ],
 
@@ -5189,6 +5219,11 @@ return [
                     'type' => 'array',
                     'required' => false,
                 ],
+                'stock_transfer_line_items' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ]
             ],
         ],
 

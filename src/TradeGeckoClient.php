@@ -52,6 +52,7 @@ use Psr\Http\Message\ResponseInterface;
  * @method array getAddresses(array $args = []) {@command TradeGecko GetAddresses}
  * @method array getAddress(array $args = []) {@command TradeGecko GetAddress}
  * @method array createAddress(array $args = []) {@command TradeGecko CreateAddress}
+ * @method array updateAddress(array $args = []) {@command TradeGecko UpdateAddress}
  * @method array deleteAddress(array $args = []) {@command TradeGecko DeleteAddress}
  *
  * COMPANIES RELATED METHODS:
@@ -59,6 +60,7 @@ use Psr\Http\Message\ResponseInterface;
  * @method array getCompanies(array $args = []) {@command TradeGecko GetCompanies}
  * @method array getCompany(array $args = []) {@command TradeGecko GetCompany}
  * @method array createCompany(array $args = []) {@command TradeGecko CreateCompany}
+ * @method array updateCompany(array $args = []) {@command TradeGecko UpdateCompany}
  * @method array deleteCompany(array $args = []) {@command TradeGecko DeleteCompany}
  *
  * CONTACT RELATED METHODS:
@@ -66,6 +68,7 @@ use Psr\Http\Message\ResponseInterface;
  * @method array getContacts(array $args = []) {@command TradeGecko GetContacts}
  * @method array getContact(array $args = []) {@command TradeGecko GetContact}
  * @method array createContact(array $args = []) {@command TradeGecko CreateContact}
+ * @method array updateContact(array $args = []) {@command TradeGecko UpdateContact}
  * @method array deleteContact(array $args = []) {@command TradeGecko DeleteContact}
  *
  * CURRENCY RELATED METHODS:
@@ -73,160 +76,183 @@ use Psr\Http\Message\ResponseInterface;
  * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
  * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
  * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
+ * @method array updateCurrency(array $args = []) {@command TradeGecko UpdateCurrency}
  * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
  *
  * FULFILLMENT RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getFulfillments(array $args = []) {@command TradeGecko GetFulfillments}
+ * @method array getFulfillment(array $args = []) {@command TradeGecko GetFulfillment}
+ * @method array createFulfillment(array $args = []) {@command TradeGecko CreateFulfillment}
+ * @method array updateFulfillment(array $args = []) {@command TradeGecko UpdateFulfillment}
+ * @method array deleteFulfillment(array $args = []) {@command TradeGecko DeleteFulfillment}
  *
  * FULFILLMENT LINE ITEM RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getFulfillmentLineItems(array $args = []) {@command TradeGecko GetFulfillmentLineItems}
+ * @method array getFulfillmentLineItem(array $args = []) {@command TradeGecko GetFulfillmentLineItem}
+ * @method array createFulfillmentLineItem(array $args = []) {@command TradeGecko CreateFulfillmentLineItem}
+ * @method array updateFulfillmentLineItem(array $args = []) {@command TradeGecko UpdateFulfillmentLineItem}
+ * @method array deleteFulfillmentLineItem(array $args = []) {@command TradeGecko DeleteFulfillmentLineItem}
  *
  * IMAGE RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getImages(array $args = []) {@command TradeGecko GetImages}
+ * @method array getImage(array $args = []) {@command TradeGecko GetImage}
+ * @method array createImage(array $args = []) {@command TradeGecko CreateImage}
+ * @method array updateImage(array $args = []) {@command TradeGecko UpdateImage}
+ * @method array deleteImage(array $args = []) {@command TradeGecko DeleteImage}
  *
  * INVOICE RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getInvoices(array $args = []) {@command TradeGecko GetInvoices}
+ * @method array getInvoice(array $args = []) {@command TradeGecko GetInvoice}
+ * @method array createInvoice(array $args = []) {@command TradeGecko CreateInvoice}
+ * @method array updateInvoice(array $args = []) {@command TradeGecko UpdateInvoice}
+ * @method array deleteInvoice(array $args = []) {@command TradeGecko DeleteInvoice}
  *
  * INVOICE LINE ITEM RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getInvoiceLineItems(array $args = []) {@command TradeGecko GetInvoiceLineItems}
+ * @method array getInvoiceLineItem(array $args = []) {@command TradeGecko GetInvoiceLineItem}
+ * @method array createInvoiceLineItem(array $args = []) {@command TradeGecko CreateInvoiceLineItem}
+ * @method array updateInvoiceLineItem(array $args = []) {@command TradeGecko UpdateInvoiceLineItem}
+ * @method array deleteInvoiceLineItem(array $args = []) {@command TradeGecko DeleteInvoiceLineItem}
  *
  * LOCATION RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getLocations(array $args = []) {@command TradeGecko GetLocations}
+ * @method array getLocation(array $args = []) {@command TradeGecko GetLocation}
+ * @method array createLocation(array $args = []) {@command TradeGecko CreateLocation}
+ * @method array updateLocation(array $args = []) {@command TradeGecko UpdateLocation}
+ * @method array deleteLocation(array $args = []) {@command TradeGecko DeleteLocation}
  *
  * NOTES RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getNotes(array $args = []) {@command TradeGecko GetNotes}
+ * @method array getNote(array $args = []) {@command TradeGecko GetNote}
+ * @method array createNote(array $args = []) {@command TradeGecko CreateNote}
+ * @method array updateNote(array $args = []) {@command TradeGecko UpdateNote}
+ * @method array deleteNote(array $args = []) {@command TradeGecko DeleteNote}
  *
  * ORDER RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getOrders(array $args = []) {@command TradeGecko GetOrders}
+ * @method array getOrder(array $args = []) {@command TradeGecko GetOrder}
+ * @method array createOrder(array $args = []) {@command TradeGecko CreateOrder}
+ * @method array updateOrder(array $args = []) {@command TradeGecko UpdateOrder}
+ * @method array deleteOrder(array $args = []) {@command TradeGecko DeleteOrder}
  *
  * ORDER LINE ITEMS RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getOrderLineItems(array $args = []) {@command TradeGecko GetOrderLineItems}
+ * @method array getOrderLineItem(array $args = []) {@command TradeGecko GetOrderLineItem}
+ * @method array createOrderLineItem(array $args = []) {@command TradeGecko CreateOrderLineItem}
+ * @method array updateOrderLineItem(array $args = []) {@command TradeGecko UpdateOrderLineItem}
+ * @method array deleteOrderLineItem(array $args = []) {@command TradeGecko DeleteOrderLineItem}
  *
  * PAYMENT TERM RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getPaymentTerms(array $args = []) {@command TradeGecko GetPaymentTerms}
+ * @method array getPaymentTerm(array $args = []) {@command TradeGecko GetPaymentTerm}
+ * @method array createPaymentTerm(array $args = []) {@command TradeGecko CreatePaymentTerm}
+ * @method array updatePaymentTerm(array $args = []) {@command TradeGecko UpdatePaymentTerm}
+ * @method array deletePaymentTerm(array $args = []) {@command TradeGecko DeletePaymentTerm}
  *
  * PRICE LIST RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getPriceLists(array $args = []) {@command TradeGecko GetPriceLists}
+ * @method array getPriceList(array $args = []) {@command TradeGecko GetPriceList}
+ * @method array createPriceList(array $args = []) {@command TradeGecko CreatePriceList}
+ * @method array updatePriceList(array $args = []) {@command TradeGecko UpdatePriceList}
+ * @method array deletePriceList(array $args = []) {@command TradeGecko DeletePriceList}
  *
  * PRODUCT RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getProducts(array $args = []) {@command TradeGecko GetProducts}
+ * @method array getProduct(array $args = []) {@command TradeGecko GetProduct}
+ * @method array createProduct(array $args = []) {@command TradeGecko CreateProduct}
+ * @method array updateProduct(array $args = []) {@command TradeGecko UpdateProduct}
+ * @method array deleteProduct(array $args = []) {@command TradeGecko DeleteProduct}
  *
  * PURCHASE ORDER RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getPurchaseOrders(array $args = []) {@command TradeGecko GetPurchaseOrders}
+ * @method array getPurchaseOrder(array $args = []) {@command TradeGecko GetPurchaseOrder}
+ * @method array createPurchaseOrder(array $args = []) {@command TradeGecko CreatePurchaseOrder}
+ * @method array updatePurchaseOrder(array $args = []) {@command TradeGecko UpdatePurchaseOrder}
+ * @method array deletePurchaseOrder(array $args = []) {@command TradeGecko DeletePurchaseOrder}
  *
  * PURCHASE ORDER LINE ITEM RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getPurchaseOrderLineItems(array $args = []) {@command TradeGecko GetPurchaseOrderLineItems}
+ * @method array getPurchaseOrderLineItem(array $args = []) {@command TradeGecko GetPurchaseOrderLineItem}
+ * @method array createPurchaseOrderLineItem(array $args = []) {@command TradeGecko CreatePurchaseOrderLineItem}
+ * @method array updatePurchaseOrderLineItem(array $args = []) {@command TradeGecko UpdatePurchaseOrderLineItem}
+ * @method array deletePurchaseOrderLineItem(array $args = []) {@command TradeGecko DeletePurchaseOrderLineItem}
  *
  * STOCK ADJUSTMENT RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getStockAdjustments(array $args = []) {@command TradeGecko GetStockAdjustments}
+ * @method array getStockAdjustment(array $args = []) {@command TradeGecko GetStockAdjustment}
+ * @method array createStockAdjustment(array $args = []) {@command TradeGecko CreateStockAdjustment}
+ * @method array updateStockAdjustment(array $args = []) {@command TradeGecko UpdateStockAdjustment}
+ * @method array deleteStockAdjustment(array $args = []) {@command TradeGecko DeleteStockAdjustment}
  *
  * STOCK ADJUSTMENT LINE ITEM RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getStockAdjustmentLineItems(array $args = []) {@command TradeGecko GetStockAdjustmentLineItems}
+ * @method array getStockAdjustmentLineItem(array $args = []) {@command TradeGecko GetStockAdjustmentLineItem}
+ * @method array createStockAdjustmentLineItem(array $args = []) {@command TradeGecko CreateStockAdjustmentLineItem}
+ * @method array updateStockAdjustmentLineItem(array $args = []) {@command TradeGecko UpdateStockAdjustmentLineItem}
+ * @method array deleteStockAdjustmentLineItem(array $args = []) {@command TradeGecko DeleteStockAdjustmentLineItem}
  *
  * STOCK TRANSFER RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getStockTransfers(array $args = []) {@command TradeGecko GetStockTransfers}
+ * @method array getStockTransfer(array $args = []) {@command TradeGecko GetStockTransfer}
+ * @method array createStockTransfer(array $args = []) {@command TradeGecko CreateStockTransfer}
+ * @method array updateStockTransfer(array $args = []) {@command TradeGecko UpdateStockTransfer}
+ * @method array deleteStockTransfer(array $args = []) {@command TradeGecko DeleteStockTransfer}
  *
  * STOCK TRANSFER LINE ITEM RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getStockTransferLineItems(array $args = []) {@command TradeGecko GetStockTransferLineItems}
+ * @method array getStockTransferLineItem(array $args = []) {@command TradeGecko GetStockTransferLineItem}
+ * @method array createStockTransferLineItem(array $args = []) {@command TradeGecko CreateStockTransferLineItem}
+ * @method array updateStockTransferLineItem(array $args = []) {@command TradeGecko UpdateStockTransferLineItem}
+ * @method array deleteStockTransferLineItem(array $args = []) {@command TradeGecko DeleteStockTransferLineItem}
  *
  * TAX COMPONENT RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getTaxComponents(array $args = []) {@command TradeGecko GetTaxComponents}
+ * @method array getTaxComponent(array $args = []) {@command TradeGecko GetTaxComponent}
+ * @method array createTaxComponent(array $args = []) {@command TradeGecko CreateTaxComponent}
+ * @method array updateTaxComponent(array $args = []) {@command TradeGecko UpdateTaxComponent}
+ * @method array deleteTaxComponent(array $args = []) {@command TradeGecko DeleteTaxComponent}
  *
  * TAX TYPE RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getTaxTypes(array $args = []) {@command TradeGecko GetTaxTypes}
+ * @method array getTaxType(array $args = []) {@command TradeGecko GetTaxType}
+ * @method array createTaxType(array $args = []) {@command TradeGecko CreateTaxType}
+ * @method array updateTaxType(array $args = []) {@command TradeGecko UpdateTaxType}
+ * @method array deleteTaxType(array $args = []) {@command TradeGecko DeleteTaxType}
  *
  * USER RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getUsers(array $args = []) {@command TradeGecko GetUsers}
+ * @method array getUser(array $args = []) {@command TradeGecko GetUser}
+ * @method array updateUser(array $args = []) {@command TradeGecko UpdateUser}
+ * @method array deleteUser(array $args = []) {@command TradeGecko DeleteUser}
  *
  * VARIANT RELATED METHODS:
  *
- * @method array getCurrencies(array $args = []) {@command TradeGecko GetCurrencies}
- * @method array getCurrency(array $args = []) {@command TradeGecko GetCurrency}
- * @method array createCurrency(array $args = []) {@command TradeGecko CreateCurrency}
- * @method array deleteCurrency(array $args = []) {@command TradeGecko DeleteCurrency}
+ * @method array getVariants(array $args = []) {@command TradeGecko GetVariants}
+ * @method array getVariant(array $args = []) {@command TradeGecko GetVariant}
+ * @method array createVariant(array $args = []) {@command TradeGecko CreateVariant}
+ * @method array updateVariant(array $args = []) {@command TradeGecko UpdateVariant}
+ * @method array deleteVariant(array $args = []) {@command TradeGecko DeleteVariant}
  *
  * ITERATOR METHODS:
  *
@@ -235,6 +261,28 @@ use Psr\Http\Message\ResponseInterface;
  * @method \Traversable getCompaniesIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetCompanies}
  * @method \Traversable getContactsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetContacts}
  * @method \Traversable getCurrenciesIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetCurrencies}
+ * @method \Traversable getFulfillmentsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetFulfillments}
+ * @method \Traversable getFulfillmentLineItemsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetFulfillmentLineItems}
+ * @method \Traversable getImagesIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetImages}
+ * @method \Traversable getInvoicesIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetInvoices}
+ * @method \Traversable getInvoiceLineItemsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetInvoiceLineItems}
+ * @method \Traversable getLocationsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetLocations}
+ * @method \Traversable getNotesIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetNotes}
+ * @method \Traversable getOrdersIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetOrders}
+ * @method \Traversable getOrderLineItemsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetOrderLineItems}
+ * @method \Traversable getPaymentTermsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetPaymentTerms}
+ * @method \Traversable getPriceListsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetPriceLists}
+ * @method \Traversable getProductsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetProducts}
+ * @method \Traversable getPurchaseOrdersIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetPurchaseOrders}
+ * @method \Traversable getPurchaseOrderLineItemsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetPurchaseOrderLineItems}
+ * @method \Traversable getStockAdjustmentsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetStockAdjustments}
+ * @method \Traversable getStockAdjustmentLineItemsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetStockAdjustmentLineItems}
+ * @method \Traversable getStockTransfersIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetStockTransfers}
+ * @method \Traversable getStockTransferLineItemsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetStockTransferLineItems}
+ * @method \Traversable getTaxComponentsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetTaxComponents}
+ * @method \Traversable getTaxTypesIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetTaxTypes}
+ * @method \Traversable getUsersIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetUsers}
+ * @method \Traversable getVariantsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetVariants}
  */
 class TradeGeckoClient
 {
@@ -403,9 +451,16 @@ class TradeGeckoClient
      */
     private function unwrapResponseData(CommandInterface $command, ToArrayInterface $commandResult): array
     {
+        $result = $commandResult->toArray();
+
+        // For PUT and DELETE, TradeGecko does not send any response so we just send back empty array
+        if (empty($result)) {
+            return $result;
+        }
+
         $operation = $this->guzzleClient->getDescription()->getOperation($command->getName());
         $rootKey   = $operation->getData('root_key');
 
-        return (null === $rootKey) ? $commandResult->toArray() : $commandResult->toArray()[$rootKey];
+        return (null === $rootKey) ? $result : $result[$rootKey];
     }
 }

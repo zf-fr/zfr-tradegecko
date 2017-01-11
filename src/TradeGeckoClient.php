@@ -254,6 +254,14 @@ use Psr\Http\Message\ResponseInterface;
  * @method array updateVariant(array $args = []) {@command TradeGecko UpdateVariant}
  * @method array deleteVariant(array $args = []) {@command TradeGecko DeleteVariant}
  *
+ * WEBHOOK RELATED METHODS:
+ *
+ * @method array getWebhooks(array $args = []) {@command TradeGecko GetWebhooks}
+ * @method array getWebhook(array $args = []) {@command TradeGecko GetWebhook}
+ * @method array createWebhook(array $args = []) {@command TradeGecko CreateWebhook}
+ * @method array updateWebhook(array $args = []) {@command TradeGecko UpdateWebhook}
+ * @method array deleteWebhook(array $args = []) {@command TradeGecko DeleteWebhook}
+ *
  * ITERATOR METHODS:
  *
  * @method \Traversable getAccountsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetAccounts}
@@ -283,6 +291,7 @@ use Psr\Http\Message\ResponseInterface;
  * @method \Traversable getTaxTypesIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetTaxTypes}
  * @method \Traversable getUsersIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetUsers}
  * @method \Traversable getVariantsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetVariants}
+ * @method \Traversable getWebhooksIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetWebhooks}
  */
 class TradeGeckoClient
 {
@@ -438,7 +447,7 @@ class TradeGeckoClient
 
             // Advance the page
             $args['page']++;
-        } while(count($results) >= 100);
+        } while (count($results) >= 100);
     }
 
     /**

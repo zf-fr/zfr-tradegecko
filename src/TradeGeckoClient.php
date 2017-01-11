@@ -425,8 +425,8 @@ class TradeGeckoClient
      */
     private function iterateResources(string $commandName, array $args): Generator
     {
-        // When using the iterator, we force the maximum number of items per page to 100, and we init the page to 1 to start from start
-        $args['limit'] = 100;
+        // When using the iterator, we force the maximum number of items per page to 250 (maximum allowed), and we init the page to 1 to start from start
+        $args['limit'] = 250;
         $args['page']  = 1;
 
         do {

@@ -6376,6 +6376,156 @@ return [
                 ],
             ],
         ],
+
+        /**
+         * --------------------------------------------------------------------------------
+         * WEBHOOK RELATED METHODS
+         *
+         * DOC: http://developer.tradegecko.com/#webhook
+         * --------------------------------------------------------------------------------
+         */
+
+        'GetWebhooks' => [
+            'httpMethod' => 'GET',
+            'uri' => 'webhooks',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'webhooks',
+            ],
+            'parameters' => [
+                'ids' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'created_at_min' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'created_at_max' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'updated_at_min' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'updated_at_max' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'limit' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'min' => 1,
+                    'max' => 250,
+                    'required' => false,
+                ],
+                'page' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'min' => 1,
+                    'required' => false,
+                ],
+            ],
+        ],
+
+        'GetWebhook' => [
+            'httpMethod' => 'GET',
+            'uri' => 'webhooks/{id}',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'webhook',
+            ],
+            'parameters' => [
+                'id' => [
+                    'location' => 'uri',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+            ],
+        ],
+
+        'CreateWebhook' => [
+            'httpMethod' => 'POST',
+            'uri' => 'webhooks',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'webhook',
+            ],
+            'parameters' => [
+                'address' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+                'event' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => true,
+                    'enum' => [
+                        'account.update', 'user.create', 'product.create', 'product.update', 'product.destroy', 'variant.create',
+                        'variant.update', 'variant.destroy', 'image.create', 'image.update', 'image.destroy', 'company.create', 'company.update',
+                        'company.destroy', 'contact.create', 'contact.update', 'contact.destroy', 'address.create', 'address.update',
+                        'address.destroy', 'order.create', 'order.update', 'order.destroy', 'invoice.create', 'invoice.update', 'invoice.destroy',
+                        'fulfillment.create', 'fulfillment.update', 'fulfillment.destroy', 'purchase_order.create', 'purchase_order.update',
+                        'purchase_order.destroy', 'procurement.create', 'procurement.update procurement.destroy', 'stock_adjustment.create',
+                        'stock_adjustment.update', 'stock_adjustment.destroy', 'stock_transfer.create', 'stock_transfer.update', 'stock_transfer.destroy'
+                    ]
+                ],
+            ],
+        ],
+
+        'UpdateWebhook' => [
+            'httpMethod' => 'PUT',
+            'uri' => 'webhooks/{id}',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'webhook',
+            ],
+            'parameters' => [
+                'address' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'event' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                    'enum' => [
+                        'account.update', 'user.create', 'product.create', 'product.update', 'product.destroy', 'variant.create',
+                        'variant.update', 'variant.destroy', 'image.create', 'image.update', 'image.destroy', 'company.create', 'company.update',
+                        'company.destroy', 'contact.create', 'contact.update', 'contact.destroy', 'address.create', 'address.update',
+                        'address.destroy', 'order.create', 'order.update', 'order.destroy', 'invoice.create', 'invoice.update', 'invoice.destroy',
+                        'fulfillment.create', 'fulfillment.update', 'fulfillment.destroy', 'purchase_order.create', 'purchase_order.update',
+                        'purchase_order.destroy', 'procurement.create', 'procurement.update procurement.destroy', 'stock_adjustment.create',
+                        'stock_adjustment.update', 'stock_adjustment.destroy', 'stock_transfer.create', 'stock_transfer.update', 'stock_transfer.destroy'
+                    ]
+                ],
+            ],
+        ],
+
+        'DeleteWebhook' => [
+            'httpMethod' => 'DELETE',
+            'uri' => 'webhooks/{id}',
+            'responseModel' => 'GenericModel',
+            'parameters' => [
+                'id' => [
+                    'location' => 'uri',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+            ],
+        ],
     ],
 
     'models' => [

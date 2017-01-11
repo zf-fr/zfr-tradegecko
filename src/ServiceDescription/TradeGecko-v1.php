@@ -70,7 +70,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -443,7 +443,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -710,7 +710,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -1050,7 +1050,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -1312,7 +1312,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -1514,7 +1514,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -1829,7 +1829,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -2021,7 +2021,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -2168,7 +2168,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -2420,7 +2420,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -2612,7 +2612,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -2826,7 +2826,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -2973,7 +2973,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -3378,7 +3378,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -3640,7 +3640,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -3794,7 +3794,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -3972,7 +3972,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -4209,7 +4209,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -4547,7 +4547,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -4814,7 +4814,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -4976,7 +4976,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -5143,7 +5143,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -5345,7 +5345,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -5512,7 +5512,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -5684,7 +5684,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -5826,7 +5826,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [
@@ -6027,7 +6027,7 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
-                    'max' => 100,
+                    'max' => 250,
                     'required' => false,
                 ],
                 'page' => [

@@ -15,10 +15,15 @@
         </properties>
     </rule>
 
+    <rule ref="Generic.Files.LineLength">
+        <properties>
+            <property name="lineLimit" value="160"/>
+        </properties>
+    </rule>
+
     <!-- Paths to check -->
     <file>src</file>
     <file>test</file>
 
     <exclude-pattern>/src/ServiceDescription/*</exclude-pattern>
-    <exclude-pattern>/src/ShopifyClient.php</exclude-pattern>
 </ruleset>

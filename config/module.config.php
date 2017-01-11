@@ -22,7 +22,7 @@ use ZfrTradeGecko\TradeGeckoClient;
 return [
     'dependencies' => [
         'factories' => [
-            TradeGeckoClient::class    => TradeGeckoClientFactory::class,
+            TradeGeckoClient::class => TradeGeckoClientFactory::class,
         ],
     ],
 ];

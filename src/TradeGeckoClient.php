@@ -447,7 +447,7 @@ class TradeGeckoClient
 
             // Advance the page
             $args['page']++;
-        } while(count($results) >= 100);
+        } while (count($results) >= 100);
     }
 
     /**

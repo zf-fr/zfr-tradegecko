@@ -1629,6 +1629,7 @@ return [
                 'received_at' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'format' => 'date-time',
                     'required' => false,
                 ],
                 'service' => [
@@ -1731,6 +1732,7 @@ return [
                 'received_at' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'format' => 'date-time',
                     'required' => false,
                 ],
                 'service' => [
@@ -4162,6 +4164,133 @@ return [
 
         /**
          * --------------------------------------------------------------------------------
+         * PROCUREMENT RELATED METHODS
+         *
+         * DOC: http://developer.tradegecko.com/#procurement
+         * --------------------------------------------------------------------------------
+         */
+
+        'GetProcurements' => [
+            'httpMethod' => 'GET',
+            'uri' => 'procurements',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'procurements',
+            ],
+            'parameters' => [
+                'ids' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'created_at_min' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'created_at_max' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'updated_at_min' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'updated_at_max' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'limit' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'min' => 1,
+                    'max' => 250,
+                    'required' => false,
+                ],
+                'page' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'min' => 1,
+                    'required' => false,
+                ],
+                'purchase_order_id' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'required' => false,
+                ]
+            ],
+        ],
+
+        'GetProcurement' => [
+            'httpMethod' => 'GET',
+            'uri' => 'procurements/{id}',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'procurement',
+            ],
+            'parameters' => [
+                'id' => [
+                    'location' => 'uri',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+            ],
+        ],
+
+        'CreateProcurement' => [
+            'httpMethod' => 'POST',
+            'uri' => 'procurements',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'procurement',
+            ],
+            'parameters' => [
+                'purchase_order_id' => [
+                    'location' => 'json',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+                'exchange_rate' => [
+                    'location' => 'json',
+                    'type' => 'integer',
+                    'required' => false,
+                ],
+                'received_at' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'purchase_order_line_items' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ]
+            ],
+        ],
+
+        'DeleteProcurement' => [
+            'httpMethod' => 'DELETE',
+            'uri' => 'procurements/{id}',
+            'responseModel' => 'GenericModel',
+            'parameters' => [
+                'id' => [
+                    'location' => 'uri',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+            ],
+        ],
+
+        /**
+         * --------------------------------------------------------------------------------
          * PURCHASE ORDER RELATED METHODS
          *
          * DOC: http://developer.tradegecko.com/#purchaseorder
@@ -4354,6 +4483,7 @@ return [
                 'received_at' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'format' => 'date-time',
                     'required' => false,
                 ],
                 'total' => [
@@ -4465,6 +4595,7 @@ return [
                 'received_at' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'format' => 'date-time',
                     'required' => false,
                 ],
                 'total' => [
@@ -5197,6 +5328,7 @@ return [
                 'received_at' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'format' => 'date-time',
                     'required' => false,
                 ],
                 'notes' => [
@@ -5258,6 +5390,7 @@ return [
                 'received_at' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'format' => 'date-time',
                     'required' => false,
                 ],
                 'notes' => [

@@ -91,7 +91,8 @@ When reading TradeGecko API doc, make sure you remove the top key when exploitin
 
 ## Implemented endpoints
 
-Here is a list of supported endpoints (more to come in the future):
+Here is a list of supported endpoints (more to come in the future). Please note that some resources are not officially supported yet. They
+have been tested and are working as of 17th January 2017, but it's basically "use at your own risk".
 
 **ACCOUNT RELATED METHODS:**
 
@@ -213,7 +214,7 @@ Here is a list of supported endpoints (more to come in the future):
 * updatePaymentTerm(array $args = [])
 * deletePaymentTerm(array $args = [])
 
-**PRICE LIST RELATED METHODS:**
+**PRICE LIST RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
 
 * getPriceLists(array $args = [])
 * getPriceList(array $args = [])
@@ -228,6 +229,13 @@ Here is a list of supported endpoints (more to come in the future):
 * createProduct(array $args = [])
 * updateProduct(array $args = [])
 * deleteProduct(array $args = [])
+
+**PROCUREMENT RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
+
+* array getProcurements(array $args = [])
+* array getProcurement(array $args = [])
+* array createProcurement(array $args = [])
+* array deleteProcurement(array $args = [])
 
 **PURCHASE ORDER RELATED METHODS:**
 
@@ -245,7 +253,7 @@ Here is a list of supported endpoints (more to come in the future):
 * updatePurchaseOrderLineItem(array $args = [])
 * deletePurchaseOrderLineItem(array $args = [])
 
-**STOCK ADJUSTMENT RELATED METHODS:**
+**STOCK ADJUSTMENT RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
 
 * getStockAdjustments(array $args = [])
 * getStockAdjustment(array $args = [])
@@ -253,7 +261,7 @@ Here is a list of supported endpoints (more to come in the future):
 * updateStockAdjustment(array $args = [])
 * deleteStockAdjustment(array $args = [])
 
-**STOCK ADJUSTMENT LINE ITEM RELATED METHODS:**
+**STOCK ADJUSTMENT LINE ITEM RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
 
 * getStockAdjustmentLineItems(array $args = [])
 * getStockAdjustmentLineItem(array $args = [])
@@ -261,7 +269,7 @@ Here is a list of supported endpoints (more to come in the future):
 * updateStockAdjustmentLineItem(array $args = [])
 * deleteStockAdjustmentLineItem(array $args = [])
 
-**STOCK TRANSFER RELATED METHODS:**
+**STOCK TRANSFER RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
 
 * getStockTransfers(array $args = [])
 * getStockTransfer(array $args = [])
@@ -269,7 +277,7 @@ Here is a list of supported endpoints (more to come in the future):
 * updateStockTransfer(array $args = [])
 * deleteStockTransfer(array $args = [])
 
-**STOCK TRANSFER LINE ITEM RELATED METHODS:**
+**STOCK TRANSFER LINE ITEM RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
 
 * getStockTransferLineItems(array $args = [])
 * getStockTransferLineItem(array $args = [])
@@ -277,7 +285,7 @@ Here is a list of supported endpoints (more to come in the future):
 * updateStockTransferLineItem(array $args = [])
 * deleteStockTransferLineItem(array $args = [])
 
-**TAX COMPONENT RELATED METHODS:**
+**TAX COMPONENT RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
 
 * getTaxComponents(array $args = [])
 * getTaxComponent(array $args = [])

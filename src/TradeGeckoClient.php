@@ -167,6 +167,13 @@ use Psr\Http\Message\ResponseInterface;
  * @method array updatePriceList(array $args = []) {@command TradeGecko UpdatePriceList}
  * @method array deletePriceList(array $args = []) {@command TradeGecko DeletePriceList}
  *
+ * PROCUREMENT RELATED METHODS:
+ *
+ * @method array getProcurements(array $args = []) {@command TradeGecko GetProcurements}
+ * @method array getProcurement(array $args = []) {@command TradeGecko GetProcurement}
+ * @method array createProcurement(array $args = []) {@command TradeGecko CreateProcurement}
+ * @method array deleteProcurement(array $args = []) {@command TradeGecko DeleteProcurement}
+ *
  * PRODUCT RELATED METHODS:
  *
  * @method array getProducts(array $args = []) {@command TradeGecko GetProducts}

@@ -6048,7 +6048,7 @@ return [
                 ],
                 'sku' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'default_ledger_account_id' => [

@@ -4875,6 +4875,11 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
+                'stock_adjustment_reason_id' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false
+                ],
                 'stock_adjustment_line_items' => [
                     'location' => 'json',
                     'type' => 'array',

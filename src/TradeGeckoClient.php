@@ -390,34 +390,18 @@ class TradeGeckoClient
      */
     public function retryDecider(int $retries, RequestInterface $request, ResponseInterface $response = null, RequestException $exception = null): bool
     {
-        // Limit the number of retries to 5
-        if ($retries >= 5) {
-            return false;
-        }
-
         // Retry connection exceptions
         if ($exception instanceof ConnectException) {
             return true;
         }
 
-        // Otherwise, retry when we're having a 429 exception
+        // Otherwise, if we're having a 429, we sleep until our quota reset
         if ($response->getStatusCode() === 429) {
+            sleep((int) $response->getHeaderLine('X-Rate-Limit-Reset') - time());
             return true;
         }
 
         return false;
-    }
-
-    /**
-     * Basic retry delay
-     *
-     * @internal
-     * @param  int $retries
-     * @return int
-     */
-    public function retryDelay(int $retries): int
-    {
-        return 1000 * $retries;
     }
 
     /**
@@ -426,7 +410,7 @@ class TradeGeckoClient
     private function createDefaultClient(): GuzzleClient
     {
         $handlerStack = HandlerStack::create(new CurlHandler());
-        $handlerStack->push(Middleware::retry([$this, 'retryDecider'], [$this, 'retryDelay']));
+        $handlerStack->push(Middleware::retry([$this, 'retryDecider']));
 
         $httpClient  = new Client(['handler' => $handlerStack]);
         $description = new Description(require __DIR__ . '/ServiceDescription/TradeGecko-v1.php');

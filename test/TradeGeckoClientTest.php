@@ -34,13 +34,6 @@ use ZfrTradeGecko\TradeGeckoClient;
  */
 class TradeGeckoClientTest extends \PHPUnit_Framework_TestCase
 {
-    public function testStopRetryingAfterFiveAttempts()
-    {
-        $client = new TradeGeckoClient('access_token_123');
-
-        $this->assertFalse($client->retryDecider(6, $this->prophesize(RequestInterface::class)->reveal()));
-    }
-
     public function testRetryOnConnectionException()
     {
         $client = new TradeGeckoClient('access_token_123');
@@ -75,18 +68,12 @@ class TradeGeckoClientTest extends \PHPUnit_Framework_TestCase
         $exception = $this->prophesize(RequestException::class)->reveal();
 
         if ($statusCode === 429) {
-            $this->assertTrue($client->retryDecider(4, $request, $response->reveal(), $exception));
+            $response->getHeaderLine('X-Rate-Limit-Reset')->shouldBeCalled()->willReturn(time());
+            $this->assertTrue($client->retryDecider(1, $request, $response->reveal(), $exception));
         } else {
-            $this->assertFalse($client->retryDecider(4, $request, $response->reveal(), $exception));
+            $response->getHeaderLine('X-Rate-Limit-Reset')->shouldNotBeCalled();
+            $this->assertFalse($client->retryDecider(1, $request, $response->reveal(), $exception));
         }
-    }
-
-    public function testRetryDelay()
-    {
-        $client = new TradeGeckoClient('access_token_123');
-
-        $this->assertEquals(1000, $client->retryDelay(1));
-        $this->assertEquals(2000, $client->retryDelay(2));
     }
 
     public function testMagicMethod()

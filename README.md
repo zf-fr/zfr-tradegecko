@@ -315,3 +315,11 @@ have been tested and are working as of 17th January 2017, but it's basically "us
 * createVariant(array $args = [])
 * updateVariant(array $args = [])
 * deleteVariant(array $args = [])
+
+**WEBHOOK RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
+
+* getWebhooks(array $args = [])
+* getWebhook(array $args = [])
+* createWebhook(array $args = [])
+* updateWebhook(array $args = [])
+* deleteWebhook(array $args = [])

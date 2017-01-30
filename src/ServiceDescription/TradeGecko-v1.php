@@ -39,7 +39,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -412,7 +412,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -459,7 +459,7 @@ return [
                 ],
                 'company_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -679,7 +679,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -721,54 +721,54 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['active', 'disabled']
                 ],
                 'default_ledger_account_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'default_payment_term_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'default_stock_location_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'default_tax_type_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'company_code' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'company_type' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['business', 'supplier', 'consumer']
                 ],
                 'default_price_list_id' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'default_document_theme_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'email' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
             ],
@@ -1019,7 +1019,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -1061,17 +1061,17 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'company_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'online_ordering' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => 'boolean',
                     'required' => false,
                 ],
             ],
@@ -1281,7 +1281,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -1323,7 +1323,7 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
             ],
@@ -1483,7 +1483,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -1531,27 +1531,27 @@ return [
                 ],
                 'order_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'shipping_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'billing_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'stock_location_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'company_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -1800,7 +1800,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -1842,29 +1842,14 @@ return [
                 ],
                 'fulfillment_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'order_line_item_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
-                ],
-                'base_price' => [
-                    'location' => 'query',
-                    'type' => 'string',
-                    'required' => false,
-                ],
-                'position' => [
-                    'location' => 'query',
-                    'type' => 'integer',
-                    'required' => false,
-                ],
-                'quantity' => [
-                    'location' => 'query',
-                    'type' => 'string',
-                    'required' => false,
-                ],
+                ]
             ],
         ],
 
@@ -1992,7 +1977,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -2034,12 +2019,12 @@ return [
                 ],
                 'variant_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'uploader_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -2139,7 +2124,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -2181,42 +2166,42 @@ return [
                 ],
                 'order_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'shipping_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'billing_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'payment_term_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'invoice_number' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'payment_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'company_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'currency_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -2391,7 +2376,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -2433,28 +2418,13 @@ return [
                 ],
                 'invoice_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'order_line_item_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
-                ],
-                'base_price' => [
-                    'location' => 'query',
-                    'type' => 'string',
-                    'required' => false,
-                ],
-                'position' => [
-                    'location' => 'query',
-                    'type' => 'integer',
-                    'required' => false,
-                ],
-                'quantity' => [
-                    'location' => 'query',
-                    'type' => 'string',
-                    'required' => true,
                 ],
             ],
         ],
@@ -2583,7 +2553,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -2625,7 +2595,7 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
             ],
@@ -2797,7 +2767,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -2839,12 +2809,12 @@ return [
                 ],
                 'company_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'user_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -2944,7 +2914,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -2986,48 +2956,48 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['draft', 'active', 'finalized']
                 ],
                 'billing_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'company_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'contact_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'currency_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'shipping_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'stock_location_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'user_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'order_number' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'tags' => [
@@ -3037,49 +3007,49 @@ return [
                 ],
                 'payment_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['unpaid', 'partial', 'paid']
                 ],
                 'invoice_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['uninvoiced', 'partial', 'invoiced']
                 ],
                 'packed_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['unpacked', 'partial', 'packed']
                 ],
                 'fulfillment_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['unshipped', 'partial', 'shipped']
                 ],
                 'return_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['unreturned', 'partial', 'returned']
                 ],
                 'returning_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['unreturning', 'partial', 'returning']
                 ],
                 'shippability_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['not_shippable', 'partially_shippable', 'shippable']
                 ],
                 'backordering_status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['not_backordered', 'partially_backordered', 'backordered']
                 ],
@@ -3349,7 +3319,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -3391,17 +3361,17 @@ return [
                 ],
                 'order_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'variant_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'tax_type_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -3611,7 +3581,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -3653,7 +3623,7 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
             ],
@@ -3765,7 +3735,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -3807,13 +3777,13 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['active', 'disabled']
                 ],
                 'currency_id' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -3943,7 +3913,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -4180,7 +4150,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -4222,7 +4192,7 @@ return [
                 ],
                 'purchase_order_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ]
             ],
@@ -4307,7 +4277,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -4349,32 +4319,32 @@ return [
                 ],
                 'billing_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'company_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'currency_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'stock_location_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'supplier_address_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'order_number' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'tags' => [
@@ -4647,7 +4617,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -4689,22 +4659,22 @@ return [
                 ],
                 'procurement_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'purchase_order_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'variant_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'tax_type_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -4914,7 +4884,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -4956,12 +4926,12 @@ return [
                 ],
                 'adjustment_number' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'stock_location_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -5081,7 +5051,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -5119,6 +5089,11 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
+                    'required' => false,
+                ],
+                'stock_adjustment_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -5248,7 +5223,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -5452,7 +5427,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -5490,6 +5465,11 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
+                    'required' => false,
+                ],
+                'stock_transfer_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -5619,7 +5599,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -5661,7 +5641,7 @@ return [
                 ],
                 'tax_type_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -5791,7 +5771,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -5833,7 +5813,7 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
             ],
@@ -5933,7 +5913,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -5975,17 +5955,17 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'login_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'account_id' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -6134,7 +6114,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [
@@ -6176,12 +6156,12 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'product_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'sku' => [
@@ -6191,7 +6171,7 @@ return [
                 ],
                 'default_ledger_account_id' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'composite' => [
@@ -6533,7 +6513,7 @@ return [
             'parameters' => [
                 'ids' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
                 'created_at_min' => [

@@ -23,6 +23,8 @@ use GuzzleHttp\Client;
 use GuzzleHttp\Command\CommandInterface;
 use GuzzleHttp\Command\Guzzle\Description;
 use GuzzleHttp\Command\Guzzle\GuzzleClient;
+use GuzzleHttp\Command\Guzzle\QuerySerializer\Rfc3986Serializer;
+use GuzzleHttp\Command\Guzzle\RequestLocation\QueryLocation;
 use GuzzleHttp\Command\Guzzle\Serializer;
 use GuzzleHttp\Command\ToArrayInterface;
 use GuzzleHttp\Exception\ConnectException;
@@ -308,6 +310,11 @@ class TradeGeckoClient
     private $guzzleClient;
 
     /**
+     * @var Serializer
+     */
+    private $serializer;
+
+    /**
      * @var string
      */
     private $accessToken;
@@ -367,7 +374,7 @@ class TradeGeckoClient
         $method    = strtolower($operation->getHttpMethod());
         $rootKey   = $operation->getData('root_key');
 
-        $serializer = new Serializer($this->guzzleClient->getDescription()); // Create a default serializer to handle all the hard-work
+        $serializer = $this->getSerializer();
         $request    = $serializer($command);
 
         if (($method === 'post' || $method === 'put') && $rootKey !== null) {
@@ -440,7 +447,7 @@ class TradeGeckoClient
 
             // Advance the page
             $args['page']++;
-        } while (count($results) >= 100);
+        } while (count($results) >= 250);
     }
 
     /**
@@ -464,5 +471,21 @@ class TradeGeckoClient
         $rootKey   = $operation->getData('root_key');
 
         return (null === $rootKey) ? $result : $result[$rootKey];
+    }
+
+    /**
+     * @return Serializer
+     */
+    private function getSerializer(): Serializer
+    {
+        if ($this->serializer) {
+            return $this->serializer;
+        }
+
+        $this->serializer = new Serializer($this->guzzleClient->getDescription(), [
+            'query' => new QueryLocation('query', new Rfc3986Serializer(true))
+        ]);
+
+        return $this->serializer;
     }
 }

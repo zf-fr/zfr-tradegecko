@@ -4319,7 +4319,7 @@ return [
                 ],
                 'status' => [
                     'location' => 'query',
-                    'type' => 'integer',
+                    'type' => ['string', 'array'],
                     'enum' => ['draft', 'active', 'disabled'],
                     'required' => false
                 ],

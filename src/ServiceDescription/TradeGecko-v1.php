@@ -4317,6 +4317,12 @@ return [
                     'min' => 1,
                     'required' => false,
                 ],
+                'status' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'enum' => ['draft', 'active', 'disabled'],
+                    'required' => false
+                ],
                 'billing_address_id' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],

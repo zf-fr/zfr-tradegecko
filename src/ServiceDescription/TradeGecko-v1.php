@@ -3409,12 +3409,12 @@ return [
                 'variant_id' => [
                     'location' => 'json',
                     'type' => 'integer',
-                    'required' => true,
+                    'required' => false,
                 ],
                 'tax_type_id' => [
                     'location' => 'json',
                     'type' => 'integer',
-                    'required' => true,
+                    'required' => false,
                 ],
                 'discount' => [
                     'location' => 'json',
@@ -3449,7 +3449,7 @@ return [
                 'price' => [
                     'location' => 'json',
                     'type' => 'string',
-                    'required' => true,
+                    'required' => false,
                 ],
                 'quantity' => [
                     'location' => 'json',
@@ -4718,12 +4718,12 @@ return [
                 'variant_id' => [
                     'location' => 'json',
                     'type' => 'integer',
-                    'required' => true,
+                    'required' => false,
                 ],
                 'tax_type_id' => [
                     'location' => 'json',
                     'type' => 'integer',
-                    'required' => true,
+                    'required' => false,
                 ],
                 'procurement_id' => [
                     'location' => 'json',
@@ -4758,7 +4758,7 @@ return [
                 'price' => [
                     'location' => 'json',
                     'type' => 'string',
-                    'required' => true,
+                    'required' => false,
                 ],
                 'quantity' => [
                     'location' => 'json',

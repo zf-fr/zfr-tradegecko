@@ -397,8 +397,8 @@ class TradeGeckoClient
      */
     public function retryDecider(int $retries, RequestInterface $request, ResponseInterface $response = null, RequestException $exception = null): bool
     {
-        // Retry connection exceptions
-        if ($exception instanceof ConnectException) {
+        // Retry connection exceptions and 503 "Service Unavailable"
+        if ($exception instanceof ConnectException || $response->getStatusCode() === 503) {
             return true;
         }
 

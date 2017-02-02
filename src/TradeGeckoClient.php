@@ -397,13 +397,18 @@ class TradeGeckoClient
      */
     public function retryDecider(int $retries, RequestInterface $request, ResponseInterface $response = null, RequestException $exception = null): bool
     {
-        // Retry connection exceptions and 503 "Service Unavailable"
-        if ($exception instanceof ConnectException || $response->getStatusCode() === 503) {
+        // Retry connection exceptions
+        if ($exception instanceof ConnectException) {
+            return true;
+        }
+
+        // 503 being "Service unavailable", we retry in case it become available again
+        if ($response && $response->getStatusCode() === 503) {
             return true;
         }
 
         // Otherwise, if we're having a 429, we sleep until our quota reset
-        if ($response->getStatusCode() === 429) {
+        if ($response && $response->getStatusCode() === 429) {
             sleep((int) $response->getHeaderLine('X-Rate-Limit-Reset') - time());
             return true;
         }

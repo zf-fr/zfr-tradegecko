@@ -5269,6 +5269,26 @@ return [
                     'min' => 1,
                     'required' => false,
                 ],
+                'status' => [
+                    'location' => 'query',
+                    'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'source_location_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'destination_location_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'adjustment_number' => [
+                    'location' => 'query',
+                    'type' => ['string', 'array'],
+                    'required' => false,
+                ],
             ],
         ],
 

@@ -48,17 +48,18 @@ class TradeGeckoClientTest extends \PHPUnit_Framework_TestCase
     public function statusCodeProvider()
     {
         return [
-           [400],
-           [404],
-           [429],
-           [500]
+           [400, false],
+           [404, false],
+           [429, true],
+           [500, true],
+           [503, true]
         ];
     }
 
     /**
      * @dataProvider statusCodeProvider
      */
-    public function testRetryOnTooManyRequestsStatusCode(int $statusCode)
+    public function testRetryOnTooManyRequestsStatusCode(int $statusCode, bool $shouldRetry)
     {
         $client = new TradeGeckoClient('access_token_123');
 
@@ -72,7 +73,7 @@ class TradeGeckoClientTest extends \PHPUnit_Framework_TestCase
             $this->assertTrue($client->retryDecider(1, $request, $response->reveal(), $exception));
         } else {
             $response->getHeaderLine('X-Rate-Limit-Reset')->shouldNotBeCalled();
-            $this->assertFalse($client->retryDecider(1, $request, $response->reveal(), $exception));
+            $this->assertEquals($shouldRetry, $client->retryDecider(1, $request, $response->reveal(), $exception));
         }
     }
 

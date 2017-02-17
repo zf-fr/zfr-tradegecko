@@ -402,13 +402,17 @@ class TradeGeckoClient
             return true;
         }
 
-        // 503 being "Service unavailable", we retry in case it become available again
-        if ($response && $response->getStatusCode() === 503) {
+        $statusCode = $response->getStatusCode();
+
+        // 503 being "Service unavailable", we retry in case it become available again. We also retry on 500 as we've found out that
+        // TradeGecko API is quite unreliable and often returns 500
+
+        if ($response && ($statusCode === 503 || $statusCode === 500)) {
             return true;
         }
 
         // Otherwise, if we're having a 429, we sleep until our quota reset
-        if ($response && $response->getStatusCode() === 429) {
+        if ($response && $statusCode === 429) {
             sleep((int) $response->getHeaderLine('X-Rate-Limit-Reset') - time());
             return true;
         }

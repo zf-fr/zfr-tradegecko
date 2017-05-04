@@ -6210,6 +6210,16 @@ return [
                     'type' => 'boolean',
                     'required' => false,
                 ],
+                'product_type' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'q' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false,
+                ],
             ],
         ],
 

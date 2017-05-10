@@ -6210,6 +6210,11 @@ return [
                     'type' => 'boolean',
                     'required' => false,
                 ],
+                'order' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false,
+                ],
                 'product_type' => [
                     'location' => 'query',
                     'type' => 'string',

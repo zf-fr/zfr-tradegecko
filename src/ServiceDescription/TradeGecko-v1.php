@@ -6217,7 +6217,7 @@ return [
                 ],
                 'product_type' => [
                     'location' => 'query',
-                    'type' => 'string',
+                    'type' => ['string', 'array'],
                     'required' => false,
                 ],
                 'q' => [

@@ -1059,6 +1059,11 @@ return [
                     'min' => 1,
                     'required' => false,
                 ],
+                'online_ordering' => [
+                    'location' => 'query',
+                    'type' => 'boolean',
+                    'required' => false,
+                ],
                 'status' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
@@ -1067,11 +1072,6 @@ return [
                 'company_id' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
-                'online_ordering' => [
-                    'location' => 'query',
-                    'type' => 'boolean',
                     'required' => false,
                 ],
             ],
@@ -3155,11 +3155,6 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
-                'tags' => [
-                    'location' => 'json',
-                    'type' => 'array',
-                    'required' => false,
-                ],
                 'tax_treatment' => [
                     'location' => 'json',
                     'type' => 'string',
@@ -3171,6 +3166,11 @@ return [
                     'type' => 'string',
                     'required' => false,
                     'enum' => ['draft', 'active', 'finalized']
+                ],
+                'tags' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
                 ],
                 'order_line_items' => [
                     'location' => 'json',
@@ -3268,16 +3268,16 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
-                'tags' => [
-                    'location' => 'json',
-                    'type' => 'array',
-                    'required' => false,
-                ],
                 'tax_treatment' => [
                     'location' => 'json',
                     'type' => 'string',
                     'required' => false,
                     'enum' => ['exclusive', 'inclusive']
+                ],
+                'tags' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
                 ],
                 'status' => [
                     'location' => 'json',
@@ -4467,14 +4467,14 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
-                'tags' => [
-                    'location' => 'json',
-                    'type' => 'array',
-                    'required' => false,
-                ],
                 'cached_quantity' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'required' => false,
+                ],
+                'tags' => [
+                    'location' => 'json',
+                    'type' => 'array',
                     'required' => false,
                 ],
                 'purchase_order_line_items' => [
@@ -4579,14 +4579,14 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
-                'tags' => [
-                    'location' => 'json',
-                    'type' => 'array',
-                    'required' => false,
-                ],
                 'cached_quantity' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'required' => false,
+                ],
+                'tags' => [
+                    'location' => 'json',
+                    'type' => 'array',
                     'required' => false,
                 ],
             ],
@@ -6081,11 +6081,6 @@ return [
                     'type' => 'boolean',
                     'required' => false,
                 ],
-                'permissions' => [
-                    'location' => 'json',
-                    'type' => 'array',
-                    'required' => false,
-                ],
                 'phone_number' => [
                     'location' => 'json',
                     'type' => 'string',
@@ -6104,6 +6099,11 @@ return [
                 'account_id' => [
                     'location' => 'json',
                     'type' => 'string',
+                    'required' => false,
+                ],
+                'permissions' => [
+                    'location' => 'json',
+                    'type' => 'array',
                     'required' => false,
                 ],
             ],
@@ -6180,6 +6180,26 @@ return [
                     'min' => 1,
                     'required' => false,
                 ],
+                'composite' => [
+                    'location' => 'query',
+                    'type' => 'boolean',
+                    'required' => false,
+                ],
+                'online_ordering' => [
+                    'location' => 'query',
+                    'type' => 'boolean',
+                    'required' => false,
+                ],
+                'order' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'q' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false,
+                ],
                 'status' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
@@ -6200,29 +6220,9 @@ return [
                     'type' => ['integer', 'array'],
                     'required' => false,
                 ],
-                'composite' => [
-                    'location' => 'query',
-                    'type' => 'boolean',
-                    'required' => false,
-                ],
-                'online_ordering' => [
-                    'location' => 'query',
-                    'type' => 'boolean',
-                    'required' => false,
-                ],
-                'order' => [
-                    'location' => 'query',
-                    'type' => 'string',
-                    'required' => false,
-                ],
                 'product_type' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
-                    'required' => false,
-                ],
-                'q' => [
-                    'location' => 'query',
-                    'type' => 'string',
                     'required' => false,
                 ],
             ],

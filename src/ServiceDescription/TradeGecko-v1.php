@@ -37,11 +37,6 @@ return [
                 'root_key' => 'accounts',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -77,6 +72,11 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -410,11 +410,6 @@ return [
                 'root_key' => 'addresses',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -458,6 +453,11 @@ return [
                     'required' => false,
                 ],
                 'company_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -677,11 +677,6 @@ return [
                 'root_key' => 'companies',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -769,6 +764,11 @@ return [
                 'email' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -1017,11 +1017,6 @@ return [
                 'root_key' => 'contacts',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -1070,6 +1065,11 @@ return [
                     'required' => false,
                 ],
                 'company_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -1279,11 +1279,6 @@ return [
                 'root_key' => 'currencies',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -1324,6 +1319,11 @@ return [
                 'status' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -1481,11 +1481,6 @@ return [
                 'root_key' => 'fulfillments',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -1550,6 +1545,11 @@ return [
                     'required' => false,
                 ],
                 'company_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -1798,11 +1798,6 @@ return [
                 'root_key' => 'fulfillment_line_items',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -1849,7 +1844,12 @@ return [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
-                ]
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
             ],
         ],
 
@@ -1975,11 +1975,6 @@ return [
                 'root_key' => 'images',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -2023,6 +2018,11 @@ return [
                     'required' => false,
                 ],
                 'uploader_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -2122,11 +2122,6 @@ return [
                 'root_key' => 'invoices',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -2200,6 +2195,11 @@ return [
                     'required' => false,
                 ],
                 'currency_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -2374,11 +2374,6 @@ return [
                 'root_key' => 'invoice_line_items',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -2422,6 +2417,11 @@ return [
                     'required' => false,
                 ],
                 'order_line_item_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -2551,11 +2551,6 @@ return [
                 'root_key' => 'locations',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -2596,6 +2591,11 @@ return [
                 'status' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -2765,11 +2765,6 @@ return [
                 'root_key' => 'notes',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -2813,6 +2808,11 @@ return [
                     'required' => false,
                 ],
                 'user_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -2912,11 +2912,6 @@ return [
                 'root_key' => 'orders',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -3052,6 +3047,11 @@ return [
                     'type' => ['string', 'array'],
                     'required' => false,
                     'enum' => ['not_backordered', 'partially_backordered', 'backordered']
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
                 ],
             ],
         ],
@@ -3317,11 +3317,6 @@ return [
                 'root_key' => 'order_line_items',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -3370,6 +3365,11 @@ return [
                     'required' => false,
                 ],
                 'tax_type_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -3579,11 +3579,6 @@ return [
                 'root_key' => 'payment_terms',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -3624,6 +3619,11 @@ return [
                 'status' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -3733,11 +3733,6 @@ return [
                 'root_key' => 'price_lists',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -3782,6 +3777,11 @@ return [
                     'enum' => ['active', 'disabled']
                 ],
                 'currency_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -3911,11 +3911,6 @@ return [
                 'root_key' => 'products',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -3966,6 +3961,11 @@ return [
                 'tags' => [
                     'location' => 'query',
                     'type' => 'array',
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -4148,11 +4148,6 @@ return [
                 'root_key' => 'procurements',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -4275,11 +4270,6 @@ return [
                 'root_key' => 'purchase_orders',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -4356,6 +4346,11 @@ return [
                 'tags' => [
                     'location' => 'query',
                     'type' => 'array',
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -4621,11 +4616,6 @@ return [
                 'root_key' => 'purchase_order_line_items',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -4679,6 +4669,11 @@ return [
                     'required' => false,
                 ],
                 'tax_type_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -4888,11 +4883,6 @@ return [
                 'root_key' => 'stock_adjustments',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -4936,6 +4926,11 @@ return [
                     'required' => false,
                 ],
                 'stock_location_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -5055,11 +5050,6 @@ return [
                 'root_key' => 'stock_adjustment_line_items',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -5098,6 +5088,11 @@ return [
                     'required' => false,
                 ],
                 'stock_adjustment_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -5227,11 +5222,6 @@ return [
                 'root_key' => 'stock_transfers',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -5287,6 +5277,11 @@ return [
                 'adjustment_number' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -5451,11 +5446,6 @@ return [
                 'root_key' => 'stock_transfer_line_items',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -5494,6 +5484,11 @@ return [
                     'required' => false,
                 ],
                 'stock_transfer_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -5623,11 +5618,6 @@ return [
                 'root_key' => 'tax_components',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -5666,6 +5656,11 @@ return [
                     'required' => false,
                 ],
                 'tax_type_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -5795,11 +5790,6 @@ return [
                 'root_key' => 'tax_types',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -5840,6 +5830,11 @@ return [
                 'status' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -5937,11 +5932,6 @@ return [
                 'root_key' => 'users',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -5990,6 +5980,11 @@ return [
                     'required' => false,
                 ],
                 'account_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
@@ -6138,11 +6133,6 @@ return [
                 'root_key' => 'variants',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -6223,6 +6213,11 @@ return [
                 'product_type' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],
@@ -6552,11 +6547,6 @@ return [
                 'root_key' => 'webhooks',
             ],
             'parameters' => [
-                'ids' => [
-                    'location' => 'query',
-                    'type' => ['integer', 'array'],
-                    'required' => false,
-                ],
                 'created_at_min' => [
                     'location' => 'query',
                     'type' => 'string',
@@ -6592,6 +6582,11 @@ return [
                     'location' => 'query',
                     'type' => 'integer',
                     'min' => 1,
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
                     'required' => false,
                 ],
             ],

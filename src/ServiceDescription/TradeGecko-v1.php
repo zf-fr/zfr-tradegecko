@@ -4189,7 +4189,12 @@ return [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
                     'required' => false,
-                ]
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
             ],
         ],
 

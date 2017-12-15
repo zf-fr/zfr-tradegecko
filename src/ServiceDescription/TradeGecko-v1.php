@@ -6180,6 +6180,11 @@ return [
                     'min' => 1,
                     'required' => false,
                 ],
+                'stock_location_id' => [
+                    'location' => 'query',
+                    'type' => 'array',
+                    'required' => false,
+                ],
                 'status' => [
                     'location' => 'query',
                     'type' => ['string', 'array'],

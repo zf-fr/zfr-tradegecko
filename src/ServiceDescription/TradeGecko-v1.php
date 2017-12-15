@@ -6175,11 +6175,6 @@ return [
                     'min' => 1,
                     'required' => false,
                 ],
-                'stock_location_id' => [
-                    'location' => 'query',
-                    'type' => 'array',
-                    'required' => false,
-                ],
                 'composite' => [
                     'location' => 'query',
                     'type' => 'boolean',
@@ -6218,6 +6213,11 @@ return [
                 'default_ledger_account_id' => [
                     'location' => 'query',
                     'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'stock_location_id' => [
+                    'location' => 'query',
+                    'type' => 'array',
                     'required' => false,
                 ],
                 'product_type' => [

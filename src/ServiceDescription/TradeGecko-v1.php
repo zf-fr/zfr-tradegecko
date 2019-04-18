@@ -3160,6 +3160,11 @@ return [
                     'type' => 'string',
                     'required' => false,
                 ],
+                'billing_address' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false,
+                ],
                 'billing_address_id' => [
                     'location' => 'json',
                     'type' => 'integer',
@@ -3174,6 +3179,11 @@ return [
                     'location' => 'json',
                     'type' => 'integer',
                     'required' => false,
+                ],
+                'shipping_address' => [
+                    'location' => 'json',
+                    'type' => 'array',
+                    'required' => false
                 ],
                 'shipping_address_id' => [
                     'location' => 'json',

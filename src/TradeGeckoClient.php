@@ -347,6 +347,12 @@ class TradeGeckoClient
         }
 
         $args = $args[0] ?? [];
+        $idempotencyToken;
+        if (isset($args['idempotency_token'])) {
+            $idempotencyToken = $args['idempotency_token'];
+            unset($args['idempotency_token']);
+        }
+
         $args = array_merge($args, [
             '@http' => [
                 'headers' => [
@@ -354,6 +360,9 @@ class TradeGeckoClient
                 ]
             ]
         ]);
+        if (isset($idempotencyToken)) {
+            $args['@http']['headers']['Idempotency-Key'] = $idempotencyToken;
+        }
 
         $command = $this->guzzleClient->getCommand(ucfirst($method), $args);
         $result  = $this->guzzleClient->execute($command);

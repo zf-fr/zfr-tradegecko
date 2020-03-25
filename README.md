@@ -326,4 +326,4 @@ have been tested and are working as of 17th January 2017, but it's basically "us
 
 **PAYMENT RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
 
-* getWebhook(array $args = [])
+* getPayment(array $args = [])

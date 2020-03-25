@@ -323,3 +323,7 @@ have been tested and are working as of 17th January 2017, but it's basically "us
 * createWebhook(array $args = [])
 * updateWebhook(array $args = [])
 * deleteWebhook(array $args = [])
+
+**PAYMENT RELATED METHODS (NOT OFFICIALLY SUPPORTED YET):**
+
+* getWebhook(array $args = [])

@@ -6845,6 +6845,30 @@ return [
                 ],
             ],
         ],
+
+        /**
+         * --------------------------------------------------------------------------------
+         * PAYMENT RELATED METHODS
+         *
+         * DOC: http://developer.tradegecko.com/#payment
+         * --------------------------------------------------------------------------------
+         */
+
+        'GetPayment' => [
+            'httpMethod' => 'GET',
+            'uri' => 'payments/{id}',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'payment',
+            ],
+            'parameters' => [
+                'id' => [
+                    'location' => 'uri',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+            ],
+        ],
     ],
 
     'models' => [

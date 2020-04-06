@@ -6854,8 +6854,179 @@ return [
          * --------------------------------------------------------------------------------
          */
 
+        'GetPayments' => [
+            'httpMethod' => 'GET',
+            'uri' => 'payments',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'payment',
+            ],
+            'parameters' => [
+                'created_at_min' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'created_at_max' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'updated_at_min' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'updated_at_max' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'format' => 'date-time',
+                    'required' => false,
+                ],
+                'limit' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'min' => 1,
+                    'max' => 250,
+                    'required' => false,
+                ],
+                'page' => [
+                    'location' => 'query',
+                    'type' => 'integer',
+                    'min' => 1,
+                    'required' => false,
+                ],
+                'order' => [
+                    'location' => 'query',
+                    'type' => 'string',
+                    'required' => false
+                ],
+                'invoice_id' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+                'ids' => [
+                    'location' => 'query',
+                    'type' => ['integer', 'array'],
+                    'required' => false,
+                ],
+            ],
+        ],
+
         'GetPayment' => [
             'httpMethod' => 'GET',
+            'uri' => 'payments/{id}',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'payment',
+            ],
+            'parameters' => [
+                'id' => [
+                    'location' => 'uri',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+            ],
+        ],
+
+        'CreatePayment' => [
+            'httpMethod' => 'POST',
+            'uri' => 'payments',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'payment',
+            ],
+            'parameters' => [
+                'invoice_id' => [
+                    'location' => 'json',
+                    'type' => 'integer',
+                    'required' => true,
+                ],
+                'amount' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => true,
+                ],
+                'order_id' => [
+                    'location' => 'json',
+                    'type' => 'integer',
+                    'required' => false,
+                ],
+                'payment_method_id' => [
+                    'location' => 'json',
+                    'type' => 'integer',
+                    'required' => false,
+                ],
+                'reference' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'paid_at' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'status' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'exchange_rate' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+            ],
+        ],
+
+        'UpdatePayment' => [
+            'httpMethod' => 'PUT',
+            'uri' => 'payments/{id}',
+            'responseModel' => 'GenericModel',
+            'data' => [
+                'root_key' => 'payment',
+            ],
+            'parameters' => [
+                'amount' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'payment_method_id' => [
+                    'location' => 'json',
+                    'type' => 'integer',
+                    'required' => false,
+                ],
+                'reference' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'paid_at' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'status' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+                'exchange_rate' => [
+                    'location' => 'json',
+                    'type' => 'string',
+                    'required' => false,
+                ],
+            ],
+        ],
+
+        'DeletePayment' => [
+            'httpMethod' => 'DELETE',
             'uri' => 'payments/{id}',
             'responseModel' => 'GenericModel',
             'data' => [

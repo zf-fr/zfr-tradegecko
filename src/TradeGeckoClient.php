@@ -273,7 +273,11 @@ use Psr\Http\Message\ResponseInterface;
  *
  * PAYMENT RELATED METHODS:
  *
+ * @method array getPayments(array $args = []) {@command TradeGecko GetPayments}
  * @method array getPayment(array $args = []) {@command TradeGecko GetPayment}
+ * @method array createPayment(array $args = []) {@command TradeGecko CreatePayment}
+ * @method array updatePayment(array $args = []) {@command TradeGecko UpdatePayment}
+ * @method array deletePayment(array $args = []) {@command TradeGecko DeletePayment}
  *
  * ITERATOR METHODS:
  *

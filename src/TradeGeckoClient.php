@@ -271,6 +271,14 @@ use Psr\Http\Message\ResponseInterface;
  * @method array updateWebhook(array $args = []) {@command TradeGecko UpdateWebhook}
  * @method array deleteWebhook(array $args = []) {@command TradeGecko DeleteWebhook}
  *
+ * PAYMENT RELATED METHODS:
+ *
+ * @method array getPayments(array $args = []) {@command TradeGecko GetPayments}
+ * @method array getPayment(array $args = []) {@command TradeGecko GetPayment}
+ * @method array createPayment(array $args = []) {@command TradeGecko CreatePayment}
+ * @method array updatePayment(array $args = []) {@command TradeGecko UpdatePayment}
+ * @method array deletePayment(array $args = []) {@command TradeGecko DeletePayment}
+ *
  * ITERATOR METHODS:
  *
  * @method \Traversable getAccountsIterator(array $commandArgs = [], array $iteratorArgs = []) {@command TradeGecko GetAccounts}
